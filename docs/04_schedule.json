@@ -1,0 +1,67 @@
+﻿{
+  "project": {
+    "game_name": "",
+    "start_date": "2026-04-06",
+    "timezone": "Asia/Shanghai"
+  },
+  "capacity": {
+    "art_pd_per_day": 1.0,
+    "code_pd_per_day": 1.0,
+    "qa_pd_per_day": 1.0
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "deadline": "2026-04-07",
+      "goal": "骨架可运行",
+      "required_modules": ["M01", "M02", "M03", "M08", "M10", "M20"],
+      "acceptance": [
+        "可运行包可启动",
+        "冒烟用例通过率>=90%",
+        "P0阻塞缺陷=0"
+      ],
+      "build_path": "D:/GJ/builds/M1",
+      "qa_report_path": "D:/GJ/reports/qa/M1_summary.md"
+    },
+    {
+      "id": "M2",
+      "deadline": "2026-04-09",
+      "goal": "垂直切片可玩",
+      "required_modules": ["M04", "M06", "M11", "M12", "M13"],
+      "acceptance": [
+        "至少1条完整玩法闭环",
+        "核心反馈链路可用",
+        "高危缺陷可控"
+      ],
+      "build_path": "D:/GJ/builds/M2",
+      "qa_report_path": "D:/GJ/reports/qa/M2_summary.md"
+    },
+    {
+      "id": "M3",
+      "deadline": "2026-04-11",
+      "goal": "内容拼合冻结",
+      "required_modules": ["M05", "M07", "M09", "M14", "M15", "M16", "M17"],
+      "acceptance": [
+        "停止新增系统",
+        "P1任务完成率>=85%",
+        "回归通过"
+      ],
+      "build_path": "D:/GJ/builds/M3",
+      "qa_report_path": "D:/GJ/reports/qa/M3_summary.md"
+    },
+    {
+      "id": "M4",
+      "deadline": "2026-04-12",
+      "goal": "发布候选",
+      "required_modules": ["M19"],
+      "acceptance": [
+        "性能达到目标",
+        "无阻塞缺陷",
+        "发布包可安装可运行"
+      ],
+      "build_path": "D:/GJ/builds/M4",
+      "qa_report_path": "D:/GJ/reports/qa/M4_final.md"
+    }
+  ],
+  "notes": "从 03_task_cards.json 聚合 estimate_pd 后更新实际排期。"
+}

@@ -1,0 +1,169 @@
+﻿{
+  "project": {
+    "game_name": "",
+    "version": "v0.1"
+  },
+  "modules": [
+    {
+      "module_id": "M01",
+      "module_name": "项目骨架与规范",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": []
+    },
+    {
+      "module_id": "M02",
+      "module_name": "输入与控制",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": ["M01"]
+    },
+    {
+      "module_id": "M03",
+      "module_name": "角色/单位基础框架",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": ["M01", "M02"]
+    },
+    {
+      "module_id": "M04",
+      "module_name": "移动与导航",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M02", "M03"]
+    },
+    {
+      "module_id": "M05",
+      "module_name": "交互系统",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 40,
+      "depends_on": ["M03"]
+    },
+    {
+      "module_id": "M06",
+      "module_name": "战斗/行为执行",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M03", "M10", "M12", "M16"]
+    },
+    {
+      "module_id": "M07",
+      "module_name": "AI/对手行为",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M03", "M10"]
+    },
+    {
+      "module_id": "M08",
+      "module_name": "关卡/局内流程",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": ["M01"]
+    },
+    {
+      "module_id": "M09",
+      "module_name": "任务/目标/规则",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 40,
+      "depends_on": ["M08", "M10"]
+    },
+    {
+      "module_id": "M10",
+      "module_name": "数值与配置",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": ["M01"]
+    },
+    {
+      "module_id": "M11",
+      "module_name": "UI/HUD/菜单流",
+      "enabled": "must",
+      "priority": "P1",
+      "score": 70,
+      "depends_on": ["M08", "M10"]
+    },
+    {
+      "module_id": "M12",
+      "module_name": "动画系统",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M03"]
+    },
+    {
+      "module_id": "M13",
+      "module_name": "特效与反馈",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M12"]
+    },
+    {
+      "module_id": "M14",
+      "module_name": "音频系统",
+      "enabled": "optional",
+      "priority": "P2",
+      "score": 40,
+      "depends_on": ["M01"]
+    },
+    {
+      "module_id": "M15",
+      "module_name": "摄像机与视图",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M03"]
+    },
+    {
+      "module_id": "M16",
+      "module_name": "物理与碰撞",
+      "enabled": "optional",
+      "priority": "P1",
+      "score": 60,
+      "depends_on": ["M03"]
+    },
+    {
+      "module_id": "M17",
+      "module_name": "存档与进度",
+      "enabled": "optional",
+      "priority": "P2",
+      "score": 40,
+      "depends_on": ["M10", "M11"]
+    },
+    {
+      "module_id": "M18",
+      "module_name": "网络/联机",
+      "enabled": "na",
+      "priority": "NA",
+      "score": 0,
+      "depends_on": ["M03", "M09", "M11", "M17"]
+    },
+    {
+      "module_id": "M19",
+      "module_name": "性能与稳定性",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": ["M01"]
+    },
+    {
+      "module_id": "M20",
+      "module_name": "构建发布与可观测",
+      "enabled": "must",
+      "priority": "P0",
+      "score": 70,
+      "depends_on": ["M01"]
+    }
+  ],
+  "notes": "基于 docs/01_feature_input.json 按规则调整 enabled/priority/score。"
+}

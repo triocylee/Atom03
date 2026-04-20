@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Replica Dispatcher"
+  short_description: "Build dispatch-ready milestone and role task docs."
+  default_prompt: "Given a game name, generate a milestone roadmap plus Art/Code/QA dispatch docs, save under D:\\\\GJ\\\\docs\\\\dispatch, and return only file paths unless inline detail is requested."
