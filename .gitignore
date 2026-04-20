@@ -20,3 +20,6 @@ Obj/
 Logs/
 UserSettings/
 
+# Local per-game working copies (never commit)
+local_projects/*
+!local_projects/.gitkeep
