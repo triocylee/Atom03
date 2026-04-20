@@ -1,0 +1,29 @@
+{
+  "game_name": "REPLACE_ME",
+  "target_platform": "PC",
+  "engine": "Unity",
+  "scope": "core_experience",
+  "timeline_days": 1,
+  "core_loop": [
+    "输入-反馈-成长",
+    "战斗/资源循环",
+    "失败-重开"
+  ],
+  "must_have_systems": [
+    "player_controller",
+    "enemy_ai",
+    "wave_or_level_manager",
+    "ui_hud",
+    "save_or_progress"
+  ],
+  "asset_policy": {
+    "copyright_safe": true,
+    "allow_placeholder_assets": true,
+    "require_manifest": true
+  },
+  "definition_of_done": [
+    "可在10-15分钟内跑通一次核心循环",
+    "关键系统15分钟内无阻断性崩溃",
+    "资产清单与场景引用可追踪"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "game_name": "Rust",
+  "target_platform": "PC",
+  "engine": "Unity",
+  "scope": "core_experience",
+  "timeline_days": 1,
+  "core_loop": [
+    "采集基础资源(木头/石头/布)",
+    "制作并放置基础建造部件(地基/墙/门)",
+    "维持生存指标(生命/饥饿/口渴)",
+    "遭遇基础AI威胁并完成防御"
+  ],
+  "must_have_systems": [
+    "first_person_controller",
+    "gathering_and_inventory",
+    "crafting_queue",
+    "building_placement",
+    "survival_stats",
+    "basic_ai_enemy",
+    "day_night_cycle",
+    "save_or_progress"
+  ],
+  "out_of_scope": [
+    "多人联机与服务器同步",
+    "完整科技树和全部物品",
+    "复杂基地攻防与爆破",
+    "商业级美术和音频最终品质",
+    "持久化大型地图与复杂地形生成"
+  ],
+  "asset_policy": {
+    "copyright_safe": true,
+    "allow_placeholder_assets": true,
+    "require_manifest": true
+  },
+  "definition_of_done": [
+    "新存档可在10分钟内完成采集->制作->建造闭环",
+    "基础敌对AI可生成、追击并造成伤害",
+    "HUD 可显示生命/饥饿/口渴与快捷栏",
+    "核心流程无阻断性崩溃并可连续运行15分钟"
+  ]
+}

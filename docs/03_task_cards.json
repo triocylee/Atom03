@@ -1,0 +1,57 @@
+﻿{
+  "project": {
+    "game_name": "",
+    "sprint": "S1"
+  },
+  "tasks": [
+    {
+      "task_id": "M01-L2A-CODE-01",
+      "module_id": "M01",
+      "level": "L3",
+      "role": "code",
+      "title": "定义项目目录与模块接口规范",
+      "complexity": "C2",
+      "estimate_pd": 1.5,
+      "owner": "",
+      "depends_on": [],
+      "milestone": "M1",
+      "priority": "P0",
+      "dod": "规范文档可用且主工程可运行",
+      "deliverable_path": "D:/GJ/docs/specs/project_structure.md",
+      "status": "todo"
+    },
+    {
+      "task_id": "M01-L2A-ART-01",
+      "module_id": "M01",
+      "level": "L3",
+      "role": "art",
+      "title": "定义资源命名与导入规则",
+      "complexity": "C1",
+      "estimate_pd": 0.5,
+      "owner": "",
+      "depends_on": ["M01-L2A-CODE-01"],
+      "milestone": "M1",
+      "priority": "P0",
+      "dod": "资源可按规则批量导入无冲突",
+      "deliverable_path": "D:/GJ/docs/specs/art_asset_convention.md",
+      "status": "todo"
+    },
+    {
+      "task_id": "M01-L2D-QA-01",
+      "module_id": "M01",
+      "level": "L3",
+      "role": "qa",
+      "title": "编写M1冒烟用例并执行",
+      "complexity": "C1",
+      "estimate_pd": 0.5,
+      "owner": "",
+      "depends_on": ["M01-L2A-CODE-01"],
+      "milestone": "M1",
+      "priority": "P0",
+      "dod": "输出冒烟报告并可复现缺陷",
+      "deliverable_path": "D:/GJ/reports/qa/M1_smoke.md",
+      "status": "todo"
+    }
+  ],
+  "notes": "按已启用模块继续追加任务，确保每个模块至少覆盖 art/code/qa 各1条 L3 工单。"
+}
