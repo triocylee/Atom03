@@ -7,7 +7,8 @@
 - `agents/`: 可执行代理脚本
 - `automation/`: 自动化入口脚本
 - `docs/`: 已产出的文档与规则
-- `projects/`: 每个游戏的执行目录（含模板）
+- `projects/`: 仅保留模板（`_template`）
+- `local_projects/`: 每次游戏名对应的本地实例（不入库）
 - `archive/`: 归档历史产物
 
 ## 快速开始
@@ -20,11 +21,17 @@
 
 ## 新项目流程
 
-1. 复制 `projects/_template` 为 `projects/<GameName>`
-2. 编辑 `projects/<GameName>/spec/feature_input.json`
+1. 复制 `projects/_template` 为 `local_projects/<GameName>`
+2. 编辑 `local_projects/<GameName>/spec/feature_input.json`
 3. 依据 `docs/rules/AgentPool_Rules.md` 分配 Agent
-4. 输出到 `projects/<GameName>/tasks/*` 与 `projects/<GameName>/assets/manifest/*`
-5. 你执行人工测试并记录到 `projects/<GameName>/reports/`
+4. 输出到 `local_projects/<GameName>/tasks/*` 与 `local_projects/<GameName>/assets/manifest/*`
+5. 你执行人工测试并记录到 `local_projects/<GameName>/reports/`
+
+## 模板仓库模式
+
+1. 仓库主干只提交框架模板与规则，不提交具体游戏实例。
+2. 每次新游戏实例都在 `local_projects/` 创建并本地协作。
+3. 需要共享给帮手时，仅发送模板文件或本地实例快照，不回写到模板主干。
 
 ## 关键规则入口
 
@@ -32,3 +39,4 @@
 - 通用拆解: `docs/architecture/Universal_Decomposition_Framework.md`
 - 并行规则: `docs/rules/AgentPool_Rules.md`
 - 自动驾驶: `docs/rules/Autopilot_Mode.md`
+- 模板仓库模式: `docs/rules/Template_Repo_Mode.md`

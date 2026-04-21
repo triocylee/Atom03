@@ -1,0 +1,11 @@
+# Default owner
+* @triocylee
+
+# Rules and architecture require owner review
+/docs/rules/* @triocylee
+/docs/architecture/* @triocylee
+
+# Project specs and task contracts require owner review
+/projects/*/spec/* @triocylee
+/projects/*/tasks/* @triocylee
+
