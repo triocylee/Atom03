@@ -1,0 +1,72 @@
+﻿{
+  "game_name": "PortiaJam",
+  "target_platform": "PC",
+  "engine": "Unity",
+  "render_pipeline": "Built-in Render Pipeline (required)",
+  "scope": "core_experience_p0_only",
+  "timeline_days": 2,
+  "gates": [
+    "Gate A: 场景+移动+采集+制作输入链路打通",
+    "Gate B: 建造+生存+存档+提交流程稳定"
+  ],
+  "core_loop": [
+    "采集基础资源（木材/石头/铁矿）",
+    "在基础加工机器制作半成品",
+    "在组装台按图纸建造",
+    "通过背包与生存状态维持循环"
+  ],
+  "must_have_systems": [
+    "base_scene_outdoor_indoor_and_collision",
+    "player_move_jump_gravity",
+    "interaction_prompt",
+    "tool_switch_and_gather_action",
+    "three_basic_resources_gathering",
+    "basic_machine_cutting_and_furnace",
+    "assembly_table_and_blueprint_ui",
+    "inventory_and_hotbar_ui",
+    "survival_stats",
+    "save_or_progress"
+  ],
+  "p0_functional_requirements": [
+    "搭建含野外与玩家房屋外观的3D场景，场景物体具备物理碰撞",
+    "角色可键盘移动，包含跳跃且受重力影响",
+    "场景散布木材/石头/铁矿石，玩家靠近出现交互提示",
+    "交互自动切换对应工具并播放对应采集动作，资源自动/手动拾取入包",
+    "放置基础加工机器（切割机、熔炉），可交互并执行基础加工",
+    "放置组装台，支持打开图纸UI并校验背包材料是否足够",
+    "提供背包UI，显示材料/工具及数量，并在采集/消耗时实时更新"
+  ],
+  "animation_requirements": [
+    "CutTreeStart/_0",
+    "CutTreeLoop/_0",
+    "CutTreeEnd/_0",
+    "StoneStart/_0",
+    "StoneLoop/_0",
+    "StoneEnd/_0",
+    "SawStart/_0",
+    "SawLoop/_0",
+    "SawEnd/_0"
+  ],
+  "asset_integration_constraints": {
+    "scene_entry": "Assets/GameScene/SceneMain.unity",
+    "prefab_animator_tip": "Animator Controller 通常挂在 Prefab 子节点",
+    "use_bound_prefab_gameobject_first": true
+  },
+  "explicitly_out_of_scope": [
+    "npc_system",
+    "guild_or_commerce_system",
+    "story_or_questline",
+    "p1_plus_features"
+  ],
+  "asset_policy": {
+    "copyright_safe": true,
+    "allow_placeholder_assets": true,
+    "require_manifest": true
+  },
+  "definition_of_done": [
+    "可在10-15分钟内稳定跑通采集->加工/制作->组装建造->生存的P0闭环",
+    "符合赛事P0口径且不引入NPC/商会/剧情与P1-P3功能",
+    "关键系统15分钟内无阻断崩溃，且可保存并恢复当前进度",
+    "工程使用Unity 3D Built-in管线，可正常从SceneMain进入主流程"
+  ]
+}
