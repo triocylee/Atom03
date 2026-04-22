@@ -1,4 +1,4 @@
-# GJ Workspace
+﻿# GJ Workspace
 
 这个工作区用于“给定游戏名，快速复刻 Unity 核心体验”的多 Agent 并行流水线。
 
@@ -26,6 +26,15 @@
 3. 依据 `docs/rules/AgentPool_Rules.md` 分配 Agent
 4. 输出到 `local_projects/<GameName>/tasks/*` 与 `local_projects/<GameName>/assets/manifest/*`
 5. 你执行人工测试并记录到 `local_projects/<GameName>/reports/`
+
+## Unity 基座初始化
+
+1. 创建本地实例
+`powershell -ExecutionPolicy Bypass -File scripts/init_local_project.ps1 -GameName "<GameName>"`
+2. 创建 Unity 工程骨架
+`powershell -ExecutionPolicy Bypass -File scripts/bootstrap_unity_project.ps1 -GameName "<GameName>"`
+3. 在 Unity Hub 打开
+`local_projects/<GameName>/UnityProject`
 
 ## 模板仓库模式
 
